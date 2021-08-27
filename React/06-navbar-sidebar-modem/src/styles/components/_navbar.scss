@@ -1,0 +1,115 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/mixins' as *;
+@use '../util/variables' as *;
+
+.navbar {
+  background: $white;
+  box-shadow: $light-shadow;
+  height: 15rem;
+  .nav-center {
+    .nav-header {
+      @include flex-centerj;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-toggle {
+      font-size: 1.5rem;
+      color: $primary-4;
+      background: transparent;
+      border-color: transparent;
+      transition: $transition;
+      cursor: pointer;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+
+    .logo {
+      height: 40px;
+    }
+    .links-container{
+      height: 0;
+      overflow: hidden;
+      &.show{
+        height: auto;
+      }
+    }
+    .links li {
+      color: $grey-2;
+      font-size: 1rem;
+      text-transform: capitalize;
+      letter-spacing: $spacing;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: $transition;
+      &:hover {
+        background: $primary-8;
+        color: $primary-4;
+        padding-left: 1.5rem;
+      }
+      &::after{
+        width: 100%;
+      }
+    }
+    &::after {
+      @include pseudo;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: $primary-4;
+      transition: 1s ease all;
+    }
+    .social-icons {
+      display: flex;
+      @include center-auto;
+      li {
+        margin: 0.5rem 1rem;
+      }
+      &.show{
+        height: auto;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .navbar {
+    .nav-center {
+      max-width: 1270px;
+      @include center-auto;
+      @include flex-space-bet;
+      padding: 1rem;
+      justify-content: space-between;
+
+      .nav-header {
+        padding: 0;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .links-container {
+        height: auto;
+      }
+      .links {
+        display: flex;
+        li {
+          padding: 0;
+          margin: 0 0.5rem;
+          &:hover {
+            padding: 0;
+            background: transparent;
+          }
+        }
+      }
+      .social-icons {
+        display: flex;
+        a {
+          margin: 0 0.5rem;
+          color: $primary-4;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}

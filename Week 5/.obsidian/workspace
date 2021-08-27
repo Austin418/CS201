@@ -1,0 +1,105 @@
+{
+  "main": {
+    "id": "6bcf511d01c1c4cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6fcbb9c6bf7aef2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Router.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2cce6c483fe6ce37",
+    "type": "split",
+    "children": [
+      {
+        "id": "76c2b65be2f3bc39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d2ce90afff899db6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d01fb8569b65f1be",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1ce68fefdca28c4e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c754685efed49392",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dfbc2e10bb610296",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/Router.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "201593f136e71c73",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f6fcbb9c6bf7aef2",
+  "lastOpenFiles": [
+    "Notes/Router.md",
+    "Untitled.md"
+  ]
+}
