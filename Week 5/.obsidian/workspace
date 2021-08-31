@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Notes/Router.md",
+            "file": "Notes.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Router.md",
+                "file": "Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +99,7 @@
   },
   "active": "f6fcbb9c6bf7aef2",
   "lastOpenFiles": [
-    "Notes/Router.md",
-    "Untitled.md"
+    "Untitled.md",
+    "Notes/Router.md"
   ]
 }

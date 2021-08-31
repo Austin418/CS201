@@ -4,7 +4,6 @@ import Home from '../Pages/Home'
 import About from '../Pages/About'
 import Products from '../Pages/Products'
 import Cart from '../Pages/Cart'
-import Admin from '../Pages/Admin'
 import Error from '../Pages/Error'
 
 
@@ -32,12 +31,6 @@ export const links = [
         url: '/cart',
         text: 'Cart',
         page: <Cart/>
-    },
-    {
-        id: 6,
-        url: '/admin',
-        text: "Admin",
-        page: <Admin/>
     },
     {
         id: 5, 

@@ -5,10 +5,10 @@
 .navbar {
   background: $white;
   box-shadow: $light-shadow;
-  height: 15rem;
+
   .nav-center {
     .nav-header {
-      @include flex-centerj;
+      @include flex-center;
       justify-content: space-between;
       padding: 1rem;
     }
@@ -17,9 +17,9 @@
       color: $primary-4;
       background: transparent;
       border-color: transparent;
-      transition: $transition;
+      transition: all 500ms ease;
       cursor: pointer;
-      &:hover {
+      &:active {
         transform: rotate(90deg);
       }
     }
@@ -27,46 +27,64 @@
     .logo {
       height: 40px;
     }
-    .links-container{
+    .links-container {
       height: 0;
       overflow: hidden;
-      &.show{
+      &.show {
         height: auto;
       }
     }
+
+    .links{
+      gap: 20px;
+      margin-right: 7vw;
+    }
     .links li {
-      color: $grey-2;
+      @include flex-center;
+      color: $gray-2;
       font-size: 1rem;
       text-transform: capitalize;
       letter-spacing: $spacing;
       display: block;
       padding: 0.5rem 1rem;
       transition: $transition;
+      position: relative;
+
       &:hover {
         background: $primary-8;
         color: $primary-4;
         padding-left: 1.5rem;
+        &::after {
+          width: 100%;
+        }
       }
-      &::after{
-        width: 100%;
+      &::after {
+        @include pseudo;
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background: $primary-4;
+        transition: 1s ease-out all;
+
       }
-    }
-    &::after {
-      @include pseudo;
-      position: absolute;
-      bottom: 0;
-      width: 0;
-      height: 3px;
-      background: $primary-4;
-      transition: 1s ease all;
     }
     .social-icons {
       display: flex;
-      @include center-auto;
+      // @include center-auto;
+      height: 0;
+      overflow: hidden;
+      background: $primary-9;
+      ul {
+        &:hover {
+          background: $primary-7;
+        }
+      }
       li {
         margin: 0.5rem 1rem;
       }
-      &.show{
+
+      &.show {
         height: auto;
       }
     }
@@ -80,7 +98,6 @@
       @include center-auto;
       @include flex-space-bet;
       padding: 1rem;
-      justify-content: space-between;
 
       .nav-header {
         padding: 0;
@@ -93,6 +110,7 @@
       }
       .links {
         display: flex;
+        
         li {
           padding: 0;
           margin: 0 0.5rem;
@@ -104,6 +122,11 @@
       }
       .social-icons {
         display: flex;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background: $primary-8;
+        border-radius: $radius;
         a {
           margin: 0 0.5rem;
           color: $primary-4;

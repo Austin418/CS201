@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { links, socials } from '../util/consts'
 import { FaBars } from 'react-icons/fa'
+import { GrClose } from "react-icons/gr";
 import logo from '../util/logo.svg'
+
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
   const toggleLinks = () => {
     setShowLinks(!showLinks)
   }
+  
 
   const checkSize = () => {
     if (window.innerWidth >= 768) {
@@ -26,9 +29,9 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="Logo" className='logo' />
+          <img src={'logo'} alt="Logo" className='logo' />
           <button className="nav-toggle" onClick={toggleLinks}>
-            <FaBars />
+            {!showLinks ? <FaBars/> : <GrClose/>}
           </button>
         </div>
         <div className={`links-container ${showLinks && "show"}`}>
