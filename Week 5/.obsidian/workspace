@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "f6fcbb9c6bf7aef2",
+        "id": "c6eeb4f0e0cece65",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -94,11 +94,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "f6fcbb9c6bf7aef2",
+  "active": "c6eeb4f0e0cece65",
   "lastOpenFiles": [
+    "Notes.md",
     "Untitled.md",
     "Notes/Router.md"
   ]

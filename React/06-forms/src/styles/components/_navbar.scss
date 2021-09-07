@@ -122,14 +122,17 @@
       }
       .social-icons {
         display: flex;
+        flex-direction: column;
         position: fixed;
-        bottom: 0;
+        bottom: 45vh;
         right: 0;
-        background: $primary-8;
-        border-radius: $radius;
+        background: $white;
+        border-radius: $radius 0  0 $radius;
+        box-shadow: $dark-shadow;
+        padding: 2vh 0;
         a {
-          margin: 0 0.5rem;
-          color: $primary-4;
+          
+          color: $secondary-4;
           transition: $transition;
         }
       }
