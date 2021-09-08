@@ -13,7 +13,9 @@ const Three = ({ info, title, id }) => {
         <div className="darken-background" ></div>
         <div className="modal">
 
-          <button className="close-modal">
+          <button className="close-modal" onClick={() => {
+            setIsShowing(!isShowing)
+          }}>
             <GrClose />
           </button>
           <p>
