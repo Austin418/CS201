@@ -1,0 +1,8 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/mixins' as *;
+@use '../util/variables' as *;
+
+html, body{
+  width: 100%;
+  height: 100%;
+}

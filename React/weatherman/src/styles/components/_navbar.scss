@@ -1,0 +1,144 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/mixins" as *;
+@use "../util/variables" as *;
+
+.navbar {
+  background: $white;
+  box-shadow: $light-shadow;
+  box-shadow: 0 4px 5px -4px $primary-4;
+  .nav-center {
+    .nav-header {
+      @include flex-center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .nav-toggle {
+      font-size: 1.5rem;
+      color: $primary-4;
+      background: transparent;
+      border-color: transparent;
+      transition: all 500ms ease;
+      cursor: pointer;
+      &:active {
+        transform: rotate(-45deg);
+      }
+      .burger {
+        height: 30px;
+      }
+    }
+
+    .logo {
+      height: 70px;
+    }
+    .links-container {
+      height: 0;
+      overflow: hidden;
+      &.show {
+        height: auto;
+      }
+    }
+
+    .links {
+      gap: 20px;
+    }
+    .links li {
+      @include flex-center;
+      margin: auto;
+      color: $grey-2;
+      font-size: 1rem;
+      text-transform: capitalize;
+      letter-spacing: $spacing;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: $transition;
+      position: relative;
+      text-align: center;
+      width: 100%;
+
+      &:hover {
+        background: $primary-8;
+        color: $primary-4;
+      }
+      &::after {
+        @include pseudo;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 3px;
+
+        transition: 1s ease-out all;
+      }
+    }
+    .social-icons {
+      display: flex;
+      // @include center-auto;
+      height: 0;
+      overflow: hidden;
+      background: $primary-9;
+      ul {
+        &:hover {
+          background: $primary-7;
+        }
+      }
+      li {
+        margin: 0.5rem 1rem;
+      }
+
+      &.show {
+        height: auto;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .navbar {
+    .nav-center {
+      max-width: 1270px;
+      @include center-auto;
+      @include flex-space-bet;
+      padding: 1rem;
+
+      .nav-header {
+        padding: 0;
+      }
+      .nav-toggle {
+        display: none;
+      }
+      .links-container {
+        height: auto;
+      }
+      .links {
+        display: flex;
+
+        li {
+          padding: 0;
+          margin: 0 0.5rem;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            padding: 0;
+            background: transparent;
+            border-bottom: 3px solid $primary-4;
+          }
+        }
+      }
+      .social-icons {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 45vh;
+        right: 0;
+        background: $white;
+        border-radius: $radius 0 0 $radius;
+        box-shadow: $dark-shadow;
+        padding: 2vh 0;
+        a {
+          color: $secondary-4;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}

@@ -2,25 +2,29 @@ import React from 'react'
 import { useNewsContext } from '../util/context'
 
 const News = () => {
-  const { news } = useNewsContext()
+  const {loading, hits, removeStory, news} = useNewsContext()
+  if(loading){
+    return <div className="loading"></div>
+  }
 
   console.log(news);
   return (<>
     {news.map((knew) => {
-        const { title, author, num_comments, url } = knew
+        const { objectID : id, title, author, num_comments, url, points } = knew
         return (
-          <div>
+          <div className="tile">
 
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <div className="description">
-              <h4>By {author}</h4>
+              <h4>{points} points by {author}</h4>
               |
               <h5>{num_comments}</h5>
               <div>
-                <a href={url}>Read More</a>
-                <button className="remove">
+                <a className="read-link" target="_blank" href={url} rel="noopener noreferrer">Read More</a>
+                |
+                <a href="#"className="remove">
                   Remove
-                </button>
+                </a>
               </div>
             </div>
           </div>

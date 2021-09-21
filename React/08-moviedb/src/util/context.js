@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useReducer } from 'react'
 import { useFetch } from './useFetch'
 
 const MovieContext = React.createContext()
