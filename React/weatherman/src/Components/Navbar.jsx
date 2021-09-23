@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className={`links-container ${showLinks && "show"}`}>
           <ul className="links">
             {links
-              .filter((link) => link.text !== 'Error')
+              // .filter((link) => link.text !== 'Error')
               .map((link) => {
                 const { id, url, text } = link
                 return (

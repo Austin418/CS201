@@ -8,12 +8,14 @@
   justify-content: center;
   flex-direction: column;
   max-width: 1170px;
+  border-radius: 0.25rem;
 }
 
 .section {
   background: rgba(0, 0, 0, 0.171);
   height: 150vh;
   width: 90vw;
+  border-radius: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,9 +474,14 @@ html, body {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 5px -4px #3b9dce;
+  z-index: 100;
 }
 .navbar .nav-center .nav-header {
   display: flex;

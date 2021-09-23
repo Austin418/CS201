@@ -7,7 +7,7 @@ import Sun from './Components/Sun';
 function App() {
   return (
     <>
-      <Navbar />
+      
       
       <Switch>
         <Route exact path='/'>
@@ -23,6 +23,7 @@ function App() {
             </Route>
           })}
       </Switch>
+      <Navbar />
     </>
 
   )

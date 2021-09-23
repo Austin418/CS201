@@ -10,13 +10,13 @@
   margin: 100px auto;
   @include flex-center-column;
   max-width: $max-width;
-  
+  border-radius: $radius;
 }
 .section {
   background: rgba(0, 0, 0, 0.171);
   height: 150vh;
   width: 90vw;
-  
+  border-radius: $radius;
   @include flex-center-column;
   max-width: $max-width;
   position: relative;

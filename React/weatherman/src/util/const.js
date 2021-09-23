@@ -9,19 +9,19 @@ export const links = [
       id: 1,
       url: '/',
       text: 'Home',
-      page: <Home/>
+      // page: <Home/>
   },
   {
       id: 2,
       url: '/Week',
       text: 'Week',
-      page: <Week/>
+      // page: <Week/>
   },
   {
     id: 3,
     url: '/Location',
     text: 'Location',
-    page: <Location/>
+    // page: <Location/>
 
   }
 ]

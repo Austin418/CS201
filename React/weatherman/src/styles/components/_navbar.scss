@@ -3,9 +3,14 @@
 @use "../util/variables" as *;
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: $white;
   box-shadow: $light-shadow;
   box-shadow: 0 4px 5px -4px $primary-4;
+  z-index: 100;
   .nav-center {
     .nav-header {
       @include flex-center;
