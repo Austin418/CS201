@@ -1,0 +1,20 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/mixins' as *;
+@use '../util/variables' as *;
+
+.weather-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+}
+.weather-tile{
+  padding: 10px;
+  height: 250px;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: $grey-9;
+}

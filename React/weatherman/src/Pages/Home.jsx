@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Daily from '../Components/Daily';
-import Navbar from '../Components/Navbar';
 import Sun from '../Components/Sun'
+import Today from '../Components/Today';
 import { useWeatherContext } from '../util/context';
 
 const Home = () => {
@@ -9,11 +8,11 @@ const Home = () => {
     <>
 
       <div className="background">
-        <h1>Title</h1>
+        <h1>Today</h1>
         <Sun />
         <div className="section">
           <div className="weatherTile">
-            <Daily />
+            <Today/>
           </div>
 
 

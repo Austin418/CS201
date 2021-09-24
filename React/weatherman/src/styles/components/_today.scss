@@ -1,0 +1,35 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/mixins" as *;
+@use "../util/variables" as *;
+
+.section {
+  position: relative;
+  .weatherTile{
+    display: block;
+    width: 100%;
+
+    .today-container{
+      box-shadow: $light-shadow;
+      margin: 10px auto;
+      padding: 20px;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      background: $grey-9;
+      border-radius: $radius;
+    }
+    .aside{
+      display: flex;
+      flex-direction: row;
+      margin: 10px auto;
+      .first, .second{
+        width: 40%;
+        background: $grey-9;
+        border-radius: $radius;
+        margin: auto;
+        box-shadow: $light-shadow;
+
+      }
+    }
+  }
+}

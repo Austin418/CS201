@@ -1,6 +1,5 @@
 .background {
   background: #b1d8ec;
-  height: 150vh;
   width: 93vw;
   margin: 100px auto;
   display: flex;
@@ -10,10 +9,11 @@
   max-width: 1170px;
   border-radius: 0.25rem;
 }
+.background h1 {
+  margin: 30px;
+}
 
 .section {
-  background: rgba(0, 0, 0, 0.171);
-  height: 150vh;
   width: 90vw;
   border-radius: 0.25rem;
   display: flex;
@@ -614,4 +614,50 @@ html, body {
     color: #39d085;
     transition: all 0.3s linear;
   }
+}
+.weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.weather-tile {
+  padding: 10px;
+  height: 250px;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #e0e1e1;
+}
+
+.section {
+  position: relative;
+}
+.section .weatherTile {
+  display: block;
+  width: 100%;
+}
+.section .weatherTile .today-container {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background: #e0e1e1;
+  border-radius: 0.25rem;
+}
+.section .weatherTile .aside {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+}
+.section .weatherTile .aside .first, .section .weatherTile .aside .second {
+  width: 40%;
+  background: #e0e1e1;
+  border-radius: 0.25rem;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=main.css.map */
