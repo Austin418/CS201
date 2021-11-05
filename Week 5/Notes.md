@@ -1,7 +1,3 @@
-Sun 
-more realistic cactus
-
-
 #useReducer()
 - another hook that is available with react that allows you to store a bunch of funcitons/methods in 1 or more files
 - 2 parameters
@@ -30,7 +26,7 @@ Dispatch
 		{children}
 		</AppContext.Provider>
 		)`
-- Exporting the context requires 2 differetn exports
+- Exporting the context requires 2 different exports
 - The newly create React hook 
 #CustomHooks
 -	You can create your own hooks 

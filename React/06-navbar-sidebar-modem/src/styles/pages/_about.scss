@@ -1,0 +1,38 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/mixins" as *;
+@use "../util/variables" as *;
+
+.contact-container {
+  background: $primary-8;
+  margin: auto;
+  padding: 30px;
+  .contact {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: solid 2px black;
+  }
+  .sub {
+    text-align: left;
+    font-size: 1.7rem;
+  }
+  
+}
+
+@include tablet {
+  .img-container {
+    position: absolute;
+    border-radius: $radius;
+    box-shadow: $light-shadow;
+    right: 55px;
+    top: 150px;
+    background: #fff;
+    width: 300px;
+    height: 300px;
+    img {
+      background: black;
+    }
+  }
+}

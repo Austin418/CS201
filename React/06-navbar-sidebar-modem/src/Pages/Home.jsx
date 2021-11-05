@@ -9,7 +9,9 @@ const Home = () => {
                 <header>
                     <h2 className="header">Briggs</h2>
                 </header>
-                <button className="btn">Schedule Us</button>
+                <a href="/about">
+                <button className="btn"  >Schedule Us</button>
+                </a>
             </div>
 
             <div className="container">

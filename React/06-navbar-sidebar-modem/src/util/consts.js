@@ -3,7 +3,6 @@ import React from 'react'
 import Home from '../Pages/Home'
 import About from '../Pages/About'
 import Products from '../Pages/Products'
-import Cart from '../Pages/Cart'
 import Error from '../Pages/Error'
 
 
@@ -27,13 +26,7 @@ export const links = [
         page: <Products/>
     },
     {
-        id: 4,
-        url: '/cart',
-        text: 'Cart',
-        page: <Cart/>
-    },
-    {
-        id: 5, 
+        id: 4, 
         url: '*',
         text: 'Error',
         page: <Error/>

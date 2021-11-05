@@ -1,8 +1,6 @@
-@use '../util/mixins' as *;
-@use '../util/variables' as *;
-@use '../themes/defaultTheme' as *;
-
-
+@use "../util/mixins" as *;
+@use "../util/variables" as *;
+@use "../themes/defaultTheme" as *;
 
 .section {
   width: 90vw;
@@ -11,7 +9,7 @@
   max-width: $max-width;
 }
 
-@include large {
+@include tablet {
   .section {
     width: 95vw;
   }
@@ -30,35 +28,58 @@
     text-transform: none;
     margin-bottom: 2rem;
   }
-  .three-listing{
+  .three-listing {
     width: 30vw;
     box-shadow: $light-shadow;
-    h2{
+    h2 {
       text-align: center;
     }
   }
-  button {
-    color: $white;
-    display: block;
-    width: 45%;
-    border-color: transparent;
-    background: $primary-4;
-    margin: 2rem auto 0 auto;
-    text-transform: capitalize;
-    font-size: 1.2rem;
-    padding: 0.5rem 0;
-    letter-spacing: $spacing;
-    border-radius: $radius;
-    outline: none;
-    &:hover {
-      background: $gray-1;
+  @include tablet {
+    button {
+      background: $primary-9;
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 10vh;
+      right: 20vw;
+      border-color: transparent;
+      margin: 2rem auto 0 auto;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+      letter-spacing: $spacing;
+      border-radius: $radius;
+      outline: none;
+      z-index: 1;
+      
     }
+    .btn {
+      background-color: $primary-4;
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      border-radius: $radius;
+      text-transform: capitalize;
+      color: $white;
+      letter-spacing: $spacing;
+      border-color: transparent;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      &:hover{
+        background: $gray-8;
+        transition: $transition
+      }
+    }
+    
   }
   .buttons {
     @include flex-center;
   }
 }
-.btn{
+.btn {
+  width: 100%;
   background-color: $primary-4;
   display: inline-block;
   padding: 0.5rem 0.75rem;
@@ -67,25 +88,28 @@
   color: $white;
   letter-spacing: $spacing;
   border-color: transparent;
-  margin-top: 2rem;
+  margin: auto;
   font-size: 1.2rem;
   cursor: pointer;
+  &:hover{
+    background-color: $gray-4;
+    transition: $transition;
+  }
 }
 
-.underline{
+.underline {
   @include box(20rem, 0.25rem);
   @include center-auto;
   background: $primary-4;
 }
 
-
-.nav-center{
-  .nav-header{
+.nav-center {
+  .nav-header {
     @include flex-center;
     justify-content: space-between;
     padding: 1rem;
   }
-  .nav-toggle{
+  .nav-toggle {
     font-size: 1.5rem;
     color: $primary-4;
     background: transparent;
@@ -93,4 +117,9 @@
     transition: $transition;
     cursor: pointer;
   }
+}
+
+.close-modal {
+  position: absolute;
+  right: 10px;
 }

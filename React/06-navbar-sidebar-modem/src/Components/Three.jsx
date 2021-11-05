@@ -6,18 +6,20 @@ const Three = ({ info, title, id }) => {
   const [isShowing, setIsShowing] = useState(false)
   return (
     <div className="three-listing" onClick={() => {
-      setIsShowing(true)
+      setIsShowing(!isShowing)
     }}>
       <h2>{title}</h2>
       {isShowing ? <>
-        <div className="darken-background" ></div>
-        <div className="modal">
-
-          <button className="close-modal" onClick={() => {
-            setIsShowing(!isShowing)
+      <button className="close-modal" onClick={() => {
+            setIsShowing(false)
+            console.log("this does work")
           }}>
             <GrClose />
           </button>
+        <div className="darken-background" ></div>
+        <div className="modal">
+
+          
           <p>
             {info}
           </p>

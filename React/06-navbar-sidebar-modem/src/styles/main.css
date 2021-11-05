@@ -8,7 +8,7 @@
   max-width: 1170px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .section {
     width: 95vw;
   }
@@ -35,22 +35,42 @@
 .container .three-listing h2 {
   text-align: center;
 }
-.container button {
-  color: #fff;
-  display: block;
-  width: 45%;
-  border-color: transparent;
-  background: #ce603b;
-  margin: 2rem auto 0 auto;
-  text-transform: capitalize;
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
-  letter-spacing: 0.2rem;
-  border-radius: 0.25rem;
-  outline: none;
-}
-.container button:hover {
-  background: #494b4a;
+@media only screen and (min-width: 768px) {
+  .container button {
+    background: #f3d7ce;
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10vh;
+    right: 20vw;
+    border-color: transparent;
+    margin: 2rem auto 0 auto;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    letter-spacing: 0.2rem;
+    border-radius: 0.25rem;
+    outline: none;
+    z-index: 1;
+  }
+  .container .btn {
+    background-color: #ce603b;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    border-color: transparent;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .container .btn:hover {
+    background: #cecfcf;
+    transition: all 0.5s linear;
+  }
 }
 .container .buttons {
   display: flex;
@@ -59,6 +79,7 @@
 }
 
 .btn {
+  width: 100%;
   background-color: #ce603b;
   display: inline-block;
   padding: 0.5rem 0.75rem;
@@ -67,9 +88,13 @@
   color: #fff;
   letter-spacing: 0.2rem;
   border-color: transparent;
-  margin-top: 2rem;
+  margin: auto;
   font-size: 1.2rem;
   cursor: pointer;
+}
+.btn:hover {
+  background-color: #838685;
+  transition: all 0.5s linear;
 }
 
 .underline {
@@ -94,6 +119,11 @@
   border-color: transparent;
   transition: all 0.5s linear;
   cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  right: 10px;
 }
 
 h1,
@@ -495,6 +525,10 @@ html, body {
      object-fit: cover;
 }
 
+.darken-background {
+  background: transparent;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -528,7 +562,7 @@ header h2 {
   /* The image used */
   background: linear-gradient(to right, rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.692)), url("./../media/pexels-vassilis-sfakianopoulos-3443255.jpg");
   /* Set a specific height */
-  min-height: 100vh;
+  min-height: 75vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -563,24 +597,11 @@ header h2 {
     height: fit-content;
   }
 
-  .darken-background {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.473);
-    position: relative;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
-  }
-
   .modal {
     position: absolute;
     background: white;
     width: 50vw;
     height: 55vh;
-    z-index: 100;
     right: 0;
     left: 0;
     top: 0;
@@ -588,27 +609,48 @@ header h2 {
     margin: auto;
     border-radius: 0.25rem;
   }
-  .modal .close-modal {
+
+  .darken-background {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
-    right: 0;
     left: 0;
-    z-index: 300;
-    background: #ce603b;
-    width: 40px;
-    height: 40px;
-    border-radius: 13.3px;
   }
-  .modal .close-modal svg {
+}
+.contact-container {
+  background: #ecc0b1;
+  margin: auto;
+  padding: 30px;
+}
+.contact-container .contact {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: solid 2px black;
+}
+.contact-container .sub {
+  text-align: left;
+  font-size: 1.7rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-container {
     position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    font-size: 40px;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    right: 55px;
+    top: 150px;
+    background: #fff;
+    width: 300px;
+    height: 300px;
   }
-  .modal .close-modal:active {
-    background: #ecc0b1;
-    transform: rotate(90deg);
+  .img-container img {
+    background: black;
   }
 }/*# sourceMappingURL=main.css.map */
