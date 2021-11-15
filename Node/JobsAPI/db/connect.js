@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const connectDB = rul => {
+const connectDB = (url)=> {
   return mongoose
   .connect(url)
   .then(() => {
