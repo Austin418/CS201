@@ -29,6 +29,10 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className="nav-center">
         <div className="nav-header">
+          {/* <img src={logo} alt="Logo" className='logo' /> */}
+          <h2>RV Repair</h2>
+          
+          
           <img src={logo} alt="Logo" className='logo' />
           <button className="nav-toggle" onClick={toggleLinks}>
             {!showLinks ? <FaBars/> : <GrClose/>}
