@@ -9,6 +9,6 @@ const {
 const {uploadProductImage} = require('../controllers/uploadController')
 
 router.route('/').get(getAllProducts).post(createProduct)
-router.route('/upload').post(uploadProductImage)
+router.route('/uploads').post(uploadProductImage)
 
 module.exports = router
